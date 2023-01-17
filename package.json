@@ -1,0 +1,26 @@
+{
+  "name": "html-css-js-template",
+  "version": "1.0.0",
+  "description": "HTML,CSS & JS template for Microverse. All linters and readme file included.",
+  "main": "index.html",
+  "scripts": {
+    "linters": "yarn hint . && yarn run-stylelint && yarn eslint .",
+    "run-stylelint": "stylelint \"**/*.css\""
+  },
+  "keywords": [
+    "Microverse"
+  ],
+  "author": "oyhpnayiaw@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "10.x",
+    "eslint": "7.x",
+    "eslint-config-airbnb-base": "14.x",
+    "eslint-plugin-import": "2.x",
+    "hint": "7.x",
+    "stylelint": "13.x",
+    "stylelint-config-standard": "21.x",
+    "stylelint-csstree-validator": "1.x",
+    "stylelint-scss": "3.x"
+  }
+}
