@@ -6,7 +6,8 @@
   "scripts": {
     "linters": "npx hint . && npm run run-stylelint && npx eslint .",
     "run-stylelint": "stylelint \"**/*.css\"",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack serve --open"
   },
   "keywords": [
     "Microverse"
@@ -30,6 +31,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "webpack-dev-server": "^4.11.1"
   }
 }
