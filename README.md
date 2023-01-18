@@ -82,8 +82,6 @@ HTML, CSS, JavaScript
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[Webpack]**
 - **[Populate Tasks from Array]**
 
@@ -176,8 +174,6 @@ Example:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Kehinde Audu**
 
