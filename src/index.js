@@ -1,20 +1,38 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
-import Icon from './shoot.png';
 
-function component() {
-  const element = document.createElement('div');
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const taskContent = document.querySelector('.todo-header');
 
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+const tasks = [
+  {
+    description: 'Read JavaScript',
+    completed: true,
+    index: 1,
+  },
+  {
+    description: 'Read CSS',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Work on HTML',
+    completed: false,
+    index: 3,
+  },
+];
 
-  element.appendChild(myIcon);
+const displayTask = (tasks) => {
+  tasks.forEach((task) => {
+    const html = `
+    <div class="header">
+    <div class="check-content">
+      <input type="checkbox" class="checkbox" />
+      <div class="task"><p>${task.description}</p></div>
+    </div>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </div>`;
+    taskContent.insertAdjacentHTML('beforeend', html);
+  });
+};
 
-  return element;
-}
-
-document.body.appendChild(component());
+displayTask(tasks);
