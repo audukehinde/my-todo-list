@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://unpkg.com/lodash@4.17.20"></script>
     <script
       src="https://kit.fontawesome.com/dfaf9de4b6.js"
       crossorigin="anonymous"
     ></script>
-    <script defer="defer" src="main.js"></script>
-  </head>
+  <script defer src="main.js"></script></head>
   <body>
     <div class="todo-container">
       <div class="todo-header">
@@ -18,13 +18,21 @@
           <h1>Today's Todo</h1>
           <i class="fa-solid fa-rotate"></i>
         </div>
-        <form action="#">
-          <input name="" id="" placeholder="Add to your list" />
-          <i class="fa-solid fa-angle-right"></i>
+        <!-- <form action="#"> -->
+        <form id="new-todo-form">
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="Add Todo"
+          />
+          <button type="submit"><i class="fa-solid fa-angle-right"></i></button>
         </form>
       </div>
+
       <footer>Clear all Completed</footer>
     </div>
+
     <script src="../dist/main.js"></script>
   </body>
 </html>

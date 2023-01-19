@@ -18,14 +18,37 @@
           <h1>Today's Todo</h1>
           <i class="fa-solid fa-rotate"></i>
         </div>
-        <form action="#">
-          <input type="text" name="" id="" placeholder="Add to your list" />
-          <i class="fa-solid fa-angle-right"></i>
+        <!-- <form action="#"> -->
+        <form id="new-todo-form">
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="Add Todo"
+          />
+          <button type="submit"><i class="fa-solid fa-angle-right"></i></button>
         </form>
+        <!-- <section class="header"> -->
+        <div id="todo-list">
+          <!-- <div class="todo-item done">
+              <label>
+                <input type="checkbox" />
+                <span class="bubble business"></span>
+              </label>
+  
+              <div class="todo-content">
+                <input type="text" value="Make a Video" readonly />
+              </div>
+              <div class="actions">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+              </div>
+            </div> -->
+        </div>
+        <!-- </section> -->
       </div>
+
       <footer>Clear all Completed</footer>
     </div>
-
-    <script src="../dist/main.js"></script>
   </body>
 </html>

@@ -1,37 +1,101 @@
 import './style.css';
 
-const taskContent = document.querySelector('.todo-header');
+let todos;
+window.addEventListener('load', () => {
+  todos = JSON.parse(localStorage.getItem('todos')) || [];
+  const newTodoForm = document.querySelector('#new-todo-form');
 
-const tasks = [
-  {
-    description: 'Read JavaScript',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Read CSS',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Work on HTML',
-    completed: false,
-    index: 3,
-  },
-];
+  newTodoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const todo = {
+      content: e.target.elements.content.value,
+      done: false,
+    };
 
-const displayTask = (tasks) => {
-  tasks.forEach((task) => {
-    const html = `
-    <div class="header">
-    <div class="check-content">
-      <input type="checkbox" class="checkbox" />
-      <div class="task"><p>${task.description}</p></div>
-    </div>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-  </div>`;
-    taskContent.insertAdjacentHTML('beforeend', html);
+    console.log(todo);
+
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
+    e.target.reset();
+
+    displayTodo();
   });
-};
+  displayTodo();
+});
 
-displayTask(tasks);
+function displayTodo() {
+  const todoList = document.querySelector('#todo-list');
+
+  todoList.innerHTML = '';
+
+  todos.forEach((todo) => {
+    const todoItem = document.createElement('div');
+    todoItem.classList.add('check-content');
+
+    const label = document.createElement('label');
+    const input = document.createElement('input');
+    const checkAndContent = document.createElement('div');
+    const content = document.createElement('div');
+    const actions = document.createElement('div');
+    const edit = document.createElement('button');
+    const deleteButton = document.createElement('button');
+
+    input.type = 'checkbox';
+    input.checked = todo.done;
+    actions.classList.add('actions');
+    edit.classList.add('edit');
+    deleteButton.classList.add('delete');
+    checkAndContent.classList.add('check-and-content');
+
+    content.innerHTML = `<input type="todo-content" value="${todo.content}" readonly>`;
+    edit.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+    label.appendChild(input);
+    checkAndContent.appendChild(label);
+    checkAndContent.appendChild(content);
+    actions.appendChild(edit);
+    actions.appendChild(deleteButton);
+    todoItem.appendChild(label);
+    todoItem.appendChild(checkAndContent);
+    todoItem.appendChild(actions);
+
+    todoList.appendChild(todoItem);
+
+    if (todo.done) {
+      todoItem.classList.add('done');
+      deleteButton.style.display = 'block';
+    }
+
+    input.addEventListener('click', (e) => {
+      todo.done = e.target.checked;
+      localStorage.setItem('todos', JSON.stringify(todos));
+
+      if (todo.done) {
+        todoItem.classList.add('done');
+      } else {
+        todoItem.classList.remove('done');
+      }
+
+      displayTodo();
+    });
+
+    deleteButton.addEventListener('click', () => {
+      todos = todos.filter((t) => t !== todo);
+      localStorage.setItem('todos', JSON.stringify(todos));
+      displayTodo();
+    });
+
+    edit.addEventListener('click', (e) => {
+      const input = content.querySelector('input');
+      input.removeAttribute('readonly');
+      input.focus();
+      input.addEventListener('blur', (e) => {
+        input.setAttribute('readonly', true);
+        todo.content = e.target.value;
+        localStorage.setItem('todos', JSON.stringify(todos));
+        displayTodo();
+      });
+    });
+  });
+}
