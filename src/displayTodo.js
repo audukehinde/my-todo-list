@@ -18,6 +18,8 @@ const displayTodo = () => {
     const edit = document.createElement('button');
     const deleteButton = document.createElement('button');
 
+    const clearAll = document.querySelector('.clear');
+
     input.type = 'checkbox';
     input.checked = todo.done;
     actions.classList.add('actions');
@@ -63,6 +65,12 @@ const displayTodo = () => {
       todos = todos.map((e, i) => ({ ...e, index: i + 1 }));
       localStorage.setItem('todos', JSON.stringify(todos));
       displayTodo();
+    });
+
+    clearAll.addEventListener('click', () => {
+      console.log('Working');
+      todos = todos.map((e, i) => ({ ...e, index: i + 1 }));
+      localStorage.clear();
     });
 
     edit.addEventListener('click', () => {

@@ -84,6 +84,7 @@ footer {
   padding: 20px;
   color: #fff;
   text-align: center;
+  cursor: pointer;
 }
 
 input:not([type='radio']):not([type='checkbox']),
