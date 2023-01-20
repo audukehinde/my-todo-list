@@ -28,12 +28,17 @@ footer {
   background-color: #fff;
 }
 
+.header {
+  background-color: rgb(12, 38, 49);
+  color: #fff;
+}
+
 .header,
 form {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px;
+  padding: 15px 20px;
   border-bottom: 1px solid rgb(184, 183, 183);
 }
 
@@ -50,6 +55,7 @@ input {
   border: none;
   outline: none;
   font-size: 16px;
+  font-style: italic;
 }
 
 i,
@@ -57,17 +63,59 @@ form {
   cursor: pointer;
 }
 
-.checkbox {
-  flex: 2;
+.check-content,
+.check-and-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgb(184, 183, 183);
 }
 
-.check-content {
-  display: flex;
-  gap: 20px;
+.check-and-content {
+  border-bottom: unset;
+  padding-bottom: 10px;
 }
 
 footer {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(12, 38, 49);
   padding: 20px;
+  color: #fff;
   text-align: center;
+}
+
+input:not([type='radio']):not([type='checkbox']),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.edit,
+.delete {
+  cursor: pointer;
+}
+
+.check-content.done .check-and-content input {
+  text-decoration: line-through;
+  color: red;
+}
+
+.delete {
+  display: none;
+}
+
+.delete i {
+  color: red;
 }

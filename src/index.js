@@ -1,37 +1,26 @@
 import './style.css';
+import getFromLocalSTorage from './myLocalStorage.js';
+import displayTodo from './displayTodo.js';
 
-const taskContent = document.querySelector('.todo-header');
+window.addEventListener('load', () => {
+  const newTodoForm = document.querySelector('#new-todo-form');
 
-const tasks = [
-  {
-    description: 'Read JavaScript',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Read CSS',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Work on HTML',
-    completed: false,
-    index: 3,
-  },
-];
+  newTodoForm.addEventListener('submit', (e) => {
+    const todos = getFromLocalSTorage();
 
-const displayTask = (tasks) => {
-  tasks.forEach((task) => {
-    const html = `
-    <div class="header">
-    <div class="check-content">
-      <input type="checkbox" class="checkbox" />
-      <div class="task"><p>${task.description}</p></div>
-    </div>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-  </div>`;
-    taskContent.insertAdjacentHTML('beforeend', html);
+    e.preventDefault();
+    const todo = {
+      content: e.target.elements.content.value,
+      done: false,
+      index: todos.length + 1,
+    };
+
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
+    e.target.reset();
+
+    displayTodo(todos);
   });
-};
-
-displayTask(tasks);
+  const todos = getFromLocalSTorage();
+  displayTodo(todos);
+});
