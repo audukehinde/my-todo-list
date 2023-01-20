@@ -1,6 +1,6 @@
 import getFromLocalSTorage from './myLocalStorage.js';
 
-function displayTodo() {
+const displayTodo = () => {
   let todos = getFromLocalSTorage();
   const todoList = document.querySelector('#todo-list');
 
@@ -76,6 +76,6 @@ function displayTodo() {
       });
     });
   });
-}
+};
 
 export default displayTodo;

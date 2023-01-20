@@ -2,9 +2,8 @@ import './style.css';
 import getFromLocalSTorage from './myLocalStorage.js';
 import displayTodo from './displayTodo.js';
 
-let todos;
 window.addEventListener('load', () => {
-  todos = getFromLocalSTorage();
+  const todos = getFromLocalSTorage();
   const newTodoForm = document.querySelector('#new-todo-form');
 
   newTodoForm.addEventListener('submit', (e) => {
