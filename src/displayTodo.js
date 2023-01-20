@@ -60,6 +60,7 @@ const displayTodo = () => {
 
     deleteButton.addEventListener('click', () => {
       todos = todos.filter((t) => t !== todo);
+      todos = todos.map((e, i) => ({ ...e, index: i + 1 }));
       localStorage.setItem('todos', JSON.stringify(todos));
       displayTodo();
     });
