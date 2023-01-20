@@ -28,6 +28,11 @@ footer {
   background-color: #fff;
 }
 
+.header {
+  background-color: rgb(12, 38, 49);
+  color: #fff;
+}
+
 .header,
 form {
   display: flex;
@@ -75,8 +80,9 @@ form {
 }
 
 footer {
-  background-color: rgb(201, 201, 201);
+  background-color: rgb(12, 38, 49);
   padding: 20px;
+  color: #fff;
   text-align: center;
 }
 
