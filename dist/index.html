@@ -18,21 +18,20 @@
           <h1>Today's Todo</h1>
           <i class="fa-solid fa-rotate"></i>
         </div>
-        <!-- <form action="#"> -->
         <form id="new-todo-form">
           <input
             type="text"
             name="content"
             id="content"
             placeholder="Add Todo"
+            required
           />
           <button type="submit"><i class="fa-solid fa-angle-right"></i></button>
         </form>
+        <div id="todo-list"></div>
       </div>
 
-      <footer>Clear all Completed</footer>
+      <button class="clear">Clear all Completed</button>
     </div>
-
-    <script src="../dist/main.js"></script>
   </body>
 </html>
