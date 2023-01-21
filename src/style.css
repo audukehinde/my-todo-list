@@ -23,7 +23,7 @@ body {
 }
 
 .todo-header,
-footer {
+.clear {
   width: 40%;
   background-color: #fff;
 }
@@ -79,11 +79,12 @@ form {
   padding-bottom: 10px;
 }
 
-footer {
+.clear {
   background-color: rgb(12, 38, 49);
   padding: 20px;
   color: #fff;
   text-align: center;
+  cursor: pointer;
 }
 
 input:not([type='radio']):not([type='checkbox']),

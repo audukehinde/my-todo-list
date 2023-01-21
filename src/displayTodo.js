@@ -1,11 +1,11 @@
 import getFromLocalSTorage from './myLocalStorage.js';
 
+const clearAll = document.querySelector('.clear');
+
 const displayTodo = () => {
   let todos = getFromLocalSTorage();
   const todoList = document.querySelector('#todo-list');
-
   todoList.innerHTML = '';
-
   todos.forEach((todo) => {
     const todoItem = document.createElement('div');
     todoItem.classList.add('check-content');
@@ -78,5 +78,13 @@ const displayTodo = () => {
     });
   });
 };
+
+clearAll.addEventListener('click', () => {
+  let todos = getFromLocalSTorage();
+  todos = todos.filter((e) => !e.done).map((e, i) => ({ ...e, index: i + 1 }));
+  localStorage.setItem('todos', JSON.stringify(todos));
+
+  displayTodo();
+});
 
 export default displayTodo;
