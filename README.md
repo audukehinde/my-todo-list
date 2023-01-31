@@ -188,14 +188,13 @@ Example:
 
 - GitHub: [@githubhandle](https://github.com/audukehinde)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kehinde-audu-a44926175/)
+- Twitter: [Twitter](@auducodes)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- FUTURE FEATURES -->
 
 <!-- ## 🔭 Future Features <a name="future-features"></a> -->
-
--
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
