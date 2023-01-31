@@ -90,6 +90,10 @@ HTML, CSS, JavaScript
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Screenshoots
+
+![App Screenshoot](/src/Screenshot_1.png)
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
