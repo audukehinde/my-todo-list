@@ -93,6 +93,8 @@ HTML, CSS, JavaScript
 ### Screenshoots
 
 ![App Screenshoot](/src/Screenshot_1.png)
+![App Screenshoot](/src/Screenshot_2.png)
+![App Screenshoot](/src/Screenshot_3.png)
 
 <!-- LIVE DEMO -->
 
