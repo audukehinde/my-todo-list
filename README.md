@@ -25,22 +25,22 @@ OPTIONAL SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
-# Template for html-css-js projects in Microverse
+# My Todo List Web Application
 
-- [x] Linter configs for **hint**, **stylelint** and **eslint**
+<!-- - [x] Linter configs for **hint**, **stylelint** and **eslint**
 - [x] Initialized package.json and add linter dependencies
 - [x] `node_modules` folder in [.gitignore](/.gitignore)
 - [x] Include [Miroverse README.md](https://github.com/microverseinc/readme-template/blob/master/README.md)
 
-> Remove this block when you submit the project.
+> Remove this block when you submit the project. -->
 
 ---
 
-<div align="center">
+<!-- <div align="center"> -->
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
   <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" /> -->
-  <h3><b>Microverse README Template</b></h3>
-</div>
+  <!-- <h3><b>Microverse README Template</b></h3> -->
+<!-- </div> -->
 
 <!-- TABLE OF CONTENTS -->
 
@@ -68,13 +68,13 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Todo List] <a name="about-project"></a>
+# 📖 Todo List Application <a name="about-project"></a>
 
-**[Todo List]**
+Todo List is an application where you write the tasks that needs to be done.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
+<!-- ### Tech Stack <a name="tech-stack"></a> -->
 
 HTML, CSS, JavaScript
 
@@ -82,8 +82,11 @@ HTML, CSS, JavaScript
 
 ### Key Features <a name="key-features"></a>
 
-- **[Webpack]**
-- **[Populate Tasks from Array]**
+- **[Add TAsks]**
+- **[Edit TAsks]**
+- **[Mark tasks as completed]**
+- **[Delete a task]**
+- **[Delete all tasks]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +94,7 @@ HTML, CSS, JavaScript
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://audukehinde.github.io/my-todo-list/)
+- [Live Demo Link](https://auducodes-todo-app.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +102,9 @@ HTML, CSS, JavaScript
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-OPEN index.html
+Clone this repository to your machine and you are go to go:
+
+https://github.com/TamaraDimov/To-Do-List.git
 
 ### Prerequisites
 
@@ -130,6 +135,10 @@ Example commands:
 
 Install this project with:
 
+cd To-Do-List
+
+npm install
+
 <!--
 Example command:
 
@@ -139,7 +148,7 @@ Example command:
 ```
 --->
 
-### Usage
+<!-- ### Usage -->
 
 <!--
 Example command:
@@ -149,7 +158,7 @@ Example command:
 ```
 --->
 
-### Run tests
+<!-- ### Run tests -->
 
 <!--
 Example command:
@@ -159,7 +168,7 @@ Example command:
 ```
 --->
 
-### Deployment
+<!-- ### Deployment -->
 
 <!--
 Example:
@@ -184,7 +193,7 @@ Example:
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+<!-- ## 🔭 Future Features <a name="future-features"></a> -->
 
 -
 
@@ -202,9 +211,9 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
+<!-- > Write a message to encourage readers to support your project -->
 
-If you like this project...
+If you like this project kindly show you support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -212,9 +221,9 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank
+<!-- I would like to thank -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 
